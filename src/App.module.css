@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: blue;
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.form {
+  width: 350px;
+  height: 250px;
+  max-height: 250px;
+  overflow-x: hidden;
+  background: #fff;
+  padding: 10px 5px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  border-radius: 5px;
+}
+.input {
+  width: calc(70% - 20px);
+  border: 1px solid blue;
+  margin: 0 10px;
+  border-radius: 5px;
+  outline: blue;
+  padding: 6px 5px;
+}
+.addBtn {
+  width: calc(30% - 20px);
+  background: blue;
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 6px 5px;
+  border: none;
+  color: #fff;
+}
+.parentList {
+  list-style-type: none;
+  width: 100%;
+  padding: 10px;
+  margin: 5px auto;
+}
+.childList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: cyan;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 5px auto;
+  align-items: center;
+}
+.deleteBtn {
+  background: rgb(1, 1, 107);
+  color: #fff;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 5px;
+  font-weight: 900;
+}

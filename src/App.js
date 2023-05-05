@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Styles from "./App.module.css";
 
 const App = () => {
   const [list, setList] = useState([]);
@@ -20,23 +21,34 @@ const App = () => {
     setList(newList);
   };
   return (
-    <div>
-      <h1>Todo List</h1>
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
-      <button onClick={() => addTodo(input)}>Add</button>
-      <ul>
-        {list.map((todo) => (
-          <li key={todo.id}>
-            {todo.todo}
-            <button onClick={() => deleteTodo(todo.id)}>&times;</button>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <div className={Styles.container}>
+        <div className={Styles.form}>
+          <input
+            className={Styles.input}
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button className={Styles.addBtn} onClick={() => addTodo(input)}>
+            Add
+          </button>
+          <ul className={Styles.parentList}>
+            {list.map((todo) => (
+              <li className={Styles.childList} key={todo.id}>
+                {todo.todo}
+                <button
+                  className={Styles.deleteBtn}
+                  onClick={() => deleteTodo(todo.id)}
+                >
+                  &#128465;
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </>
   );
 };
 
