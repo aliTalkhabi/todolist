@@ -7,7 +7,7 @@ const App = () => {
 
   const addTodo = (todo) => {
     const newTodo = {
-      id: Math.random,
+      id: Math.random(),
       todo: todo,
     };
     // add the to do the list
@@ -21,7 +21,7 @@ const App = () => {
     setList(newList);
   };
   return (
-    <>
+    <div>
       <div className={Styles.container}>
         <div className={Styles.form}>
           <input
@@ -48,7 +48,7 @@ const App = () => {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
